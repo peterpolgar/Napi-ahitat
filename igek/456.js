@@ -1,0 +1,1 @@
+var az_ige = ['Dn 2:48-49', 'Dn 2:48', 'Akkor a király fölmagasztalá Dánielt, és sok nagy ajándékot ada néki, és hatalmat adott néki Babilonnak egész tartománya felett, és a babiloni összes bölcseknek előljárójává tevé őt.', '49', 'És Dániel kéré a királyt, hogy Sidrákot, Misákot és Abednégót rendelje a babiloni tartomány gondviselésére; Dániel pedig a király udvarában vala.']
