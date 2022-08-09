@@ -1,0 +1,1 @@
+var az_ige = ['Mt 5:4; Lk 5:21b', 'Mt 5:4', 'Boldogok, a kik sírnak: mert ők megvígasztaltatnak.', 'Lk 5:21b', 'Ki bocsáthatja meg a bűnt, hanemha egyedül az Isten?']

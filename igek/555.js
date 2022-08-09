@@ -1,0 +1,1 @@
+var az_ige = ['Mt 4:4; Lk 4:4', 'Mt 4:4', 'Ő pedig felelvén, monda: Meg van írva: Nemcsak kenyérrel él az ember, hanem minden ígével, a mely Istennek szájából származik.', 'Lk 4:4', 'Jézus pedig felele néki, mondván: Meg van írva, hogy nemcsak kenyérrel él az ember, hanem az Istennek minden ígéjével.']

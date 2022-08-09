@@ -1,0 +1,1 @@
+var az_ige = ['Lk 2:39-40', 'Lk 2:39', 'És mikor mindent elvégeztek az Úr törvénye szerint, visszatérének Galileába, az ő városukba, Názáretbe.', '40', 'A kis gyermek pedig növekedék, és erősödék lélekben, teljesedve bölcsességgel; és az Istennek kegyelme vala ő rajta.']
