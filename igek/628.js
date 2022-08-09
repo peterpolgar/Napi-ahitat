@@ -1,0 +1,1 @@
+var az_ige = ['Mt 13:51-52', 'Mt 13:51', 'Monda nékik Jézus: Megértettétek-é mindezeket? Mondának néki: Megértettük Uram.', '52', 'Ő pedig monda nékik: Annakokáért minden írástudó, a ki a mennyeknek országa felől megtaníttatott, hasonlatos az olyan gazdához, a ki ót és újat hoz elő az ő éléstárából.']

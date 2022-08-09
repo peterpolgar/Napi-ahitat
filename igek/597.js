@@ -1,0 +1,1 @@
+var az_ige = ['Mt 5:17-18', 'Mt 5:17', 'Ne gondoljátok, hogy jöttem a törvénynek vagy a prófétáknak eltörlésére. Nem jöttem, hogy eltöröljem, hanem inkább, hogy betöltsem.', '18', 'Mert bizony mondom néktek, míg az ég és a föld elmúlik, a törvényből egy jóta vagy egyetlen pontocska el nem múlik, a míg minden be nem teljesedik.']
