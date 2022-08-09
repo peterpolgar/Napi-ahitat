@@ -1,0 +1,1 @@
+var az_ige = ['Mt 25:17-18', 'Mt 25:17', 'Azonképen a kié a kettő vala, az is más kettőt nyere.', '18', 'A ki pedig az egyet kapta vala, elmenvén, elásá azt a földbe, és elrejté az ő urának pénzét.']
