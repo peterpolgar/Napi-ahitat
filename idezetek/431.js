@@ -1,0 +1,1 @@
+var az_id = ['PK 463.3', 'A babiloni fogság', '„De te, Uram, trónodon ülsz örökké, királyi széked megmarad nemzedékről nemzedékre. Miért feledkezel meg rólunk ilyen sokáig, miért hagysz el minket oly hosszú időn át? Téríts magadhoz, Uram, és mi megtérünk, tedd újra olyanokká napjainkat, mint régen voltak!” (JSir 1:1–5; 2:1–4, 13; 5:1–3, 7–8, 17, 19–21).', 'PK 463.3']

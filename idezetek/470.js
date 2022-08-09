@@ -1,0 +1,1 @@
+var az_id = ['PK 544.2', 'A foglyok hazatérése', 'A próféta válaszolt: „Király, örökké élj! Az én Istenem elküldte angyalát, és az bezárta az oroszlánok száját, úgyhogy nem bántottak engem. Mert ő ártatlannak talált engem, és téged sem bántottalak meg, ó király, semmivel.', 'PK 544.2']
