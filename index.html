@@ -272,7 +272,7 @@
       document.body.scrollTop = 0; // For Safari
       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
       if ( !is_igek_load ) {
-        fill_content();
+        fill_content(false);
       }
     }
     function idezet() {
@@ -286,7 +286,7 @@
       document.body.scrollTop = 0; // For Safari
       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
       if ( !is_pl_load ) {
-        fill_content();
+        fill_content(false);
       }
     }
     function choosePart(part) {
@@ -374,7 +374,7 @@
       is_pl_load = false;
       fill_content();
     }
-    function fill_content() {
+    function fill_content(ishow = true) {
       if ( cur_idx > 1039 ) {
         document.getElementById('bekIgek').innerHTML = "Érvénytelen nap szám. Érvényes nap számok intervalluma: [1, 260]";
         document.getElementById('bekEW').innerHTML = "Érvénytelen nap szám. Érvényes nap számok intervalluma: [1, 260]";
@@ -391,6 +391,8 @@
                   tartalom += '<p><span style="color:#007c00">&nbsp;' + az_ige[1 + 2 * i] + "</span> ";
                   tartalom += az_ige[2 + 2 * i] + '</p>';
                 }
+              }else if ( ishow ) {
+                idezet();
               }
               document.getElementById('bekIgek').innerHTML = tartalom;
           };
@@ -408,6 +410,8 @@
                   tartalom += '<p>' + az_id[2 * i];
                   tartalom += '<span style="color:darkgrey">&nbsp;{' + az_id[2 * i + 1] + "}</span></p>";
                 }
+              }else if ( ishow ) {
+                igeversek();
               }
               document.getElementById('bekEW').innerHTML = tartalom;
           };
@@ -428,6 +432,10 @@
     }
     
     // localStorage analysis
+    const start = 1647734400000;
+    const aday = 86400000;
+    let cuti = new Date().getTime();
+    let cdata = Math.floor((cuti-start)/aday);
     // localStorage.removeItem("prevPart");
     let prevPart = localStorage.getItem("prevPart");
     if ( prevPart != null ) {
@@ -444,18 +452,23 @@
       let pday = document.getElementById('pday');
       pday.innerHTML = rom + ":" + prevDay + ". nap";
       // cur_idx beallitasa
-      if ( ipd == 260 ) {
-        ipd = 1;
-        if ( ipp == 4 ) {
-          ipp = 1;
-          cur_idx = 0;
+      let old_cdata = Number(localStorage.getItem("anap", cdata));
+      if ( cdata != old_cdata ) {
+        if ( ipd == 260 ) {
+          ipd = 1;
+          if ( ipp == 4 ) {
+            ipp = 1;
+            cur_idx = 0;
+          }else {
+            cur_idx = ipp * 260;
+            ++ipp;
+          }
         }else {
-          cur_idx = ipp * 260;
-          ++ipp;
+          cur_idx = (ipp - 1) * 260 + ipd;
+          ++ipd;
         }
       }else {
-        cur_idx = (ipp - 1) * 260 + ipd;
-        ++ipd;
+        cur_idx = (ipp - 1) * 260 + ipd - 1;
       }
       // set cur_part
       cur_part = ipp - 1;
@@ -464,8 +477,11 @@
       tizes = Math.floor((ipd % 100) / 10);
       egyes = Math.floor((ipd % 100) % 10);
       // storage beallitasa
-      localStorage.setItem("prevPart", ipp);
-      localStorage.setItem("prevDay", ipd);
+      if ( cdata != old_cdata ) {
+        localStorage.setItem("prevPart", ipp);
+        localStorage.setItem("prevDay", ipd);
+        localStorage.setItem("anap", cdata);
+      }
       // set elements
       document.getElementById('part1').classList.remove('aaPart');
       document.getElementById('part' + ipp).classList.add('aaPart');
@@ -479,6 +495,10 @@
     }else {
       localStorage.setItem("prevPart", 1);
       localStorage.setItem("prevDay", 1);
+      localStorage.setItem("anap", cdata);
+      document.getElementById('01').style.backgroundColor = "gold";
+      document.getElementById('02').style.backgroundColor = "gold";
+      document.getElementById('13').style.backgroundColor = "gold";
     }
     document.getElementById('igek').style.backgroundColor = "#F6F0B6";
     // fill content
@@ -486,7 +506,7 @@
   </script>
   <!-- cookie alert -->
   <div class="alert text-center cookiealert" role="alert">
-      <b>Ez a weblap localStorage objektumokat tárol az eszközödön az előző rész és nap elmentéséhez, és ez üzenet kezeléséhez.</b>
+      <b>Ez a weblap localStorage objektumokat tárol az eszközödön a kiválasztott rész és nap, és a megtekintési idő elmentéséhez, és ez üzenet kezeléséhez.</b>
       <button type="button" class="btn btn-primary btn-sm acceptcookies">Megértettem</button>
   </div>
   <script type="text/javascript">
