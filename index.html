@@ -248,6 +248,7 @@
     var cur_part = 0;
     var szazas = 0, tizes = 0, egyes = 1;
     var prev_valid = true;
+    var is_igek_vis = true, is_igek_load = false, is_pl_load = false;
     function tovabbi_inf() {
       document.getElementById('bekIgek').style.display = "none";
       document.getElementById('bekEW').style.display = "none";
@@ -256,6 +257,7 @@
       document.getElementById('igek').classList.remove('actPart');
     }
     function igeversek() {
+      is_igek_vis = true;
       document.getElementById('bekEW').style.display = "none";
       document.getElementById('tovinf').style.display = "none";
       document.getElementById('bekIgek').style.display = "block";
@@ -263,8 +265,12 @@
       document.getElementById('igek').classList.add('actPart');
       document.body.scrollTop = 0; // For Safari
       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      if ( !is_igek_load ) {
+        fill_content();
+      }
     }
     function idezet() {
+      is_igek_vis = false;
       document.getElementById('bekIgek').style.display = "none";
       document.getElementById('tovinf').style.display = "none";
       document.getElementById('bekEW').style.display = "block";
@@ -272,6 +278,9 @@
       document.getElementById('EWid').classList.add('actPart');
       document.body.scrollTop = 0; // For Safari
       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      if ( !is_pl_load ) {
+        fill_content();
+      }
     }
     function choosePart(part) {
       let old_part = cur_part;
@@ -305,6 +314,8 @@
         prev_valid = true;
       }
       // fill content
+      is_igek_load = false;
+      is_pl_load = false;
       fill_content();
     }
     function chooseNum(num, hek) {
@@ -350,6 +361,8 @@
         prev_valid = true;
       }
       // fill content
+      is_igek_load = false;
+      is_pl_load = false;
       fill_content();
     }
     function fill_content() {
@@ -357,41 +370,41 @@
         document.getElementById('bekIgek').innerHTML = "Érvénytelen nap szám. Érvényes nap számok intervalluma: [1, 260]";
         document.getElementById('bekEW').innerHTML = "Érvénytelen nap szám. Érvényes nap számok intervalluma: [1, 260]";
       }else {
-        // ige tartalom
         var script = document.createElement('script');
-        script.onload = function () {
-            let tartalom = 'Nincs mai napra vonatkozó ige.';
-            if ( az_ige.length != 0 ) {
-              tartalom = '<h5 style="color:#007c00"><b>' + az_ige[0] + "</b></h5>";
-              var eddig = Math.floor(az_ige.length / 2);
-              for ( let i = 0; i < eddig; ++i ) {
-                tartalom += '<p><span style="color:#007c00">&nbsp;' + az_ige[1 + 2 * i] + "</span> ";
-                tartalom += az_ige[2 + 2 * i] + '</p>';
+        if ( is_igek_vis ) {
+          // ige tartalom
+          script.onload = function () {
+              let tartalom = 'Nincs mai napra vonatkozó ige.';
+              if ( az_ige.length != 0 ) {
+                tartalom = '<h5 style="color:#007c00"><b>' + az_ige[0] + "</b></h5>";
+                var eddig = Math.floor(az_ige.length / 2);
+                for ( let i = 0; i < eddig; ++i ) {
+                  tartalom += '<p><span style="color:#007c00">&nbsp;' + az_ige[1 + 2 * i] + "</span> ";
+                  tartalom += az_ige[2 + 2 * i] + '</p>';
+                }
               }
-            }
-            document.getElementById('bekIgek').innerHTML = tartalom;
-        };
-        script.src = './igek/' + cur_idx + '.js';
-
-        document.head.appendChild(script);
-        
-        // idezet tartalom
-        script = document.createElement('script');
-        script.onload = function () {
-            let tartalom = 'Nincs mai napra vonatkozó PL idézet.'
-            if (az_id.length != 0){
-              tartalom = "<p>" + az_id[0] + "</p>";
-              tartalom += '<h5 style="color:#007c00"><b>' + az_id[1] + "</b></h5>";
-              var eddig = Math.floor(az_id.length / 2);
-              for ( let i = 1; i < eddig; ++i ) {
-                tartalom += '<p>' + az_id[2 * i];
-                tartalom += '<span style="color:darkgrey">&nbsp;{' + az_id[2 * i + 1] + "}</span></p>";
+              document.getElementById('bekIgek').innerHTML = tartalom;
+          };
+          script.src = './igek/' + cur_idx + '.js';
+          is_igek_load = true;
+        }else {
+          // idezet tartalom
+          script.onload = function () {
+              let tartalom = 'Nincs mai napra vonatkozó PL idézet.'
+              if (az_id.length != 0){
+                tartalom = "<p>" + az_id[0] + "</p>";
+                tartalom += '<h5 style="color:#007c00"><b>' + az_id[1] + "</b></h5>";
+                var eddig = Math.floor(az_id.length / 2);
+                for ( let i = 1; i < eddig; ++i ) {
+                  tartalom += '<p>' + az_id[2 * i];
+                  tartalom += '<span style="color:darkgrey">&nbsp;{' + az_id[2 * i + 1] + "}</span></p>";
+                }
               }
-            }
-            document.getElementById('bekEW').innerHTML = tartalom;
-        };
-        script.src = './idezetek/' + cur_idx + '.js';
-
+              document.getElementById('bekEW').innerHTML = tartalom;
+          };
+          script.src = './idezetek/' + cur_idx + '.js';
+          is_pl_load = true;
+        }
         document.head.appendChild(script);
         
         document.body.scrollTop = 0; // For Safari
