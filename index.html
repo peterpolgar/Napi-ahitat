@@ -9,30 +9,18 @@
       .container-fluid {
         padding-right: 0;
         padding-left: 0;
-        border: 2px solid black;
       }
       .container-xl {
         padding-right: 0;
         padding-left: 0;
-        border: 2px solid green;
-      }
-      .col-lg-10 {
-        border: 2px solid red;
-      }
-      .col-md-9 {
-        border: 2px solid orange;
-      }
-      .col-sm-3 {
-        border: 2px solid blue;
-      }
-      .col-sm-9 {
-        border: 2px solid blue;
       }
       #sbar {
         display: none;
         text-align: center;
-        background-color: lightseagreen;
+        background-color: #185918;
+        color: white;
         cursor: pointer;
+        margin: 0.2rem 0;
       }
       #bbar {
         display: none;
@@ -65,29 +53,27 @@
       .elsosor {
         width: 50%;
         text-align: center;
+        margin: 0.2rem 0.4rem;
       }
       #pday {
-        background-color: yellowgreen;
-      }
-      .actPart {
-        background-color: lightgreen;
+        background-color: #C4EBCF;
       }
       .apart {
         width: 25%;
         text-align: center;
-        border: 1px solid black;
+        border-right: 1px solid black;
         cursor: pointer;
       }
       .aaPart {
-        background-color: lightgoldenrodyellow;
-      }
-      .aaDay {
-        background-color: gold;
+        background-color: #F6F0B6;
       }
       .szam {
         border: 1px solid black;
         text-align: center;
         cursor: pointer;
+        border-radius: 1rem;
+        margin: 0.1rem;
+        background-color: #9DE1FF;
       }
       .stic {
         position: -webkit-sticky; /* Safari */
@@ -96,9 +82,18 @@
       }
       .cursdiv {
         cursor: pointer;
+        background-color: #BFCDF8;
+        border-radius: 1rem;
+        border: 1px solid black;
       }
       .nonu {
         width: 33.33%;
+        text-align: center;
+        cursor: pointer;
+      }
+      .ccday {
+        background-color: #F6F0B6;
+        margin-bottom: 0.2rem;
       }
       .cookiealert {
           position: fixed;
@@ -143,26 +138,26 @@
                 <div class="container-fluid">
                   <div class="row g-1">
                     <div class="col-md-3">
-                      <div id="balfs" class="bg-info py-3">&nbsp;</div>
+                      <div id="balfs" class="py-1" style="margin-top: 0.6rem">&nbsp;</div>
                       <div class="stic" id="dabel">
                         <div class="d-flex">
                           <div class="flex-fill" style="background-color: #dedede">
-                            <div class="d-flex bg-success">
+                            <div class="d-flex" style="background-color: #7FEB8F; overflow: hidden; border-radius: 1rem; border: 1px solid black; margin: 0.2rem 0;">
                               <div id="part1" class="apart py-1 aaPart" onclick="choosePart(1)">I.</div>
                               <div id="part2" class="apart py-1" onclick="choosePart(2)">II.</div>
                               <div id="part3" class="apart py-1" onclick="choosePart(3)">III.</div>
-                              <div id="part4" class="apart py-1" onclick="choosePart(4)">IV.</div>
+                              <div id="part4" class="apart py-1" style="border-right: none;" onclick="choosePart(4)">IV.</div>
                             </div>
-                            <div class="bg-info py-1" style="text-align: center;"><span id="curDay">1</span>. nap</div>
+                            <div class="py-1" style="text-align: center;"><span id="curDay" class="ccday">1</span><span class="ccday">. nap</span></div>
                             <div class="d-flex">
-                              <div id="01" class="py-2 flex-fill szam aaDay" onclick="chooseNum(0, 1)">0</div>
-                              <div id="02" class="py-2 flex-fill szam aaDay" onclick="chooseNum(0, 2)">0</div>
+                              <div id="01" class="py-2 flex-fill szam" onclick="chooseNum(0, 1)">0</div>
+                              <div id="02" class="py-2 flex-fill szam" onclick="chooseNum(0, 2)">0</div>
                               <div id="03" class="py-2 flex-fill szam" onclick="chooseNum(0, 3)">0</div>
                             </div>
                             <div class="d-flex">
                               <div id="11" class="py-2 flex-fill szam" onclick="chooseNum(1, 1)">1</div>
                               <div id="12" class="py-2 flex-fill szam" onclick="chooseNum(1, 2)">1</div>
-                              <div id="13" class="py-2 flex-fill szam aaDay" onclick="chooseNum(1, 3)">1</div>
+                              <div id="13" class="py-2 flex-fill szam" onclick="chooseNum(1, 3)">1</div>
                             </div>
                             <div class="d-flex">
                               <div id="21" class="py-2 flex-fill szam" onclick="chooseNum(2, 1)">2</div>
@@ -170,37 +165,37 @@
                               <div id="23" class="py-2 flex-fill szam" onclick="chooseNum(2, 3)">2</div>
                             </div>
                             <div class="d-flex">
-                              <div id="31" class="py-2 szam nonu">&nbsp;</div>
+                              <div id="31" class="py-2 nonu">&nbsp;</div>
                               <div id="32" class="py-2 flex-fill szam" onclick="chooseNum(3, 2)">3</div>
                               <div id="33" class="py-2 flex-fill szam" onclick="chooseNum(3, 3)">3</div>
                             </div>
                             <div class="d-flex">
-                              <div id="41" class="py-2 szam nonu">&nbsp;</div>
+                              <div id="41" class="py-2 nonu">&nbsp;</div>
                               <div id="42" class="py-2 flex-fill szam" onclick="chooseNum(4, 2)">4</div>
                               <div id="43" class="py-2 flex-fill szam" onclick="chooseNum(4, 3)">4</div>
                             </div>
                             <div class="d-flex">
-                              <div id="51" class="py-2 szam nonu">&nbsp;</div>
+                              <div id="51" class="py-2 nonu">&nbsp;</div>
                               <div id="52" class="py-2 flex-fill szam" onclick="chooseNum(5, 2)">5</div>
                               <div id="53" class="py-2 flex-fill szam" onclick="chooseNum(5, 3)">5</div>
                             </div>
                             <div class="d-flex">
-                              <div id="61" class="py-2 szam nonu">&nbsp;</div>
+                              <div id="61" class="py-2 nonu">&nbsp;</div>
                               <div id="62" class="py-2 flex-fill szam" onclick="chooseNum(6, 2)">6</div>
                               <div id="63" class="py-2 flex-fill szam" onclick="chooseNum(6, 3)">6</div>
                             </div>
                             <div class="d-flex">
-                              <div id="71" class="py-2 szam nonu">&nbsp;</div>
+                              <div id="71" class="py-2 nonu">&nbsp;</div>
                               <div id="72" class="py-2 flex-fill szam" onclick="chooseNum(7, 2)">7</div>
                               <div id="73" class="py-2 flex-fill szam" onclick="chooseNum(7, 3)">7</div>
                             </div>
                             <div class="d-flex">
-                              <div id="81" class="py-2 szam nonu">&nbsp;</div>
+                              <div id="81" class="py-2 nonu">&nbsp;</div>
                               <div id="82" class="py-2 flex-fill szam" onclick="chooseNum(8, 2)">8</div>
                               <div id="83" class="py-2 flex-fill szam" onclick="chooseNum(8, 3)">8</div>
                             </div>
                             <div class="d-flex">
-                              <div id="91" class="py-2 szam nonu">&nbsp;</div>
+                              <div id="91" class="py-2 nonu">&nbsp;</div>
                               <div id="92" class="py-2 flex-fill szam" onclick="chooseNum(9, 2)">9</div>
                               <div id="93" class="py-2 flex-fill szam" onclick="chooseNum(9, 3)">9</div>
                             </div>
@@ -211,23 +206,22 @@
                     </div>
                     <div class="col-md-9">
                       <div class="d-flex">
-                        <div class="bg-info elsosor py-3">Legutóbb megtekintett: <span id="pday"></span></div>
-                        <div class="bg-warning elsosor" style="display: flex; justify-content: center; align-items: center;"><button type="button" class="btn btn-secondary" onclick="tovabbi_inf()">További információk</button></div>
+                        <div class="elsosor py-1">Legutóbb megtekintett: <span id="pday"></span></div>
+                        <div id="btoin" class="elsosor py-1 cursdiv" onclick="tovabbi_inf()">További információk</div>
                       </div>
                       <div class="stic">
                         <div class="d-flex">
                           <div id="sbar" class="py-1" onclick="sideout()"><b>></b></div>
                           <div class="d-flex flex-fill">
-                            <div class="bg-warning elsosor py-1 cursdiv" onclick="igeversek()"><span id="igek" class="actPart">Igeversek</span></div>
-                            <div class="bg-info elsosor py-1 cursdiv" onclick="idezet()"><span id="EWid">PL idézet</span></div>
+                            <div id="igek" class="elsosor py-1 cursdiv" onclick="igeversek()">Igeversek</div>
+                            <div id="EWid" class="elsosor py-1 cursdiv" onclick="idezet()">PL idézet</div>
                           </div>
                         </div>
                       </div>
                       <div>
                         <div id="tovinf" style="display: none;">
-                          <p>A naponkénti közösség, melyet az ima és a bibliatanulmányozás által ápolhatunk Istennel, a legfontosabb lelki gyakorlat, amelyet ki kell fejlesztenünk. Ellen White írásai, amelyekre gyakran úgy utalunk, mint a „Prófétaság Lelkére” (Lásd: Jel 12:17; 19:10), ihletett segítséget jelentenek a Biblia megértéséhez, hogy felfedezhesd Isten Igéjének hatalmát és szépségét. A következő oldalakon egy napi bibliaolvasó tervet találsz, amely az adott bibliaszövegekhez kapcsolódó szakaszokat tartalmaz a Pátriárkák és próféták, Próféták és királyok, a Jézushoz vezető út, a Jézus élete, Krisztus példázatai, Gondolatok a hegyibeszédről, az Apostolok története és a Nagy küzdelem című könyvekből.</p>
+                          <p>A naponkénti közösség, melyet az ima és a bibliatanulmányozás által ápolhatunk Istennel, a legfontosabb lelki gyakorlat, amelyet ki kell fejlesztenünk. Ellen White írásai, amelyekre gyakran úgy utalunk, mint a „Prófétaság Lelkére” (Lásd: Jel 12:17; 19:10), ihletett segítséget jelentenek a Biblia megértéséhez, hogy felfedezhesd Isten Igéjének hatalmát és szépségét. Ez a weblap egy olvasási tervet valósít meg, melynek 4 szakasza van, minden szakasz egyenként 260 napból áll, és ez a terv végigvezet a Biblia elejétől a végéig. A weblap az olvasási terv alapján, annak minden egyes napjára az adott bibliaszövegeket és a hozzá kapcsolódó adott szakaszokat jelenít meg a Pátriárkák és próféták, Próféták és királyok, a Jézushoz vezető út, a Jézus élete, Krisztus példázatai, Gondolatok a hegyibeszédről, az Apostolok története és a Nagy küzdelem című könyvekből.</p>
                           <p>Különleges köszönet Arl Voorheis testvérnek azért, hogy több mint két évtizedet áldozott arra, kigyűjtse a Biblia és Ellen White írásai közötti összefüggéseket. Voorheis testvér három tervet készített, amelyek a napi olvasmány mennyiségét illetően különböznek egymástól és ezt könyv formájában kiadta Összefüggő bibliai olvasmányok néven. Ennek a csodálatos segédanyagnak egy példányát beszerezheted az Adventist Heritage Ministry oldaláról (<a href="https://www.adventistheritage.org">www.adventistheritage.org</a>). Az ebben a mellékletben található olvasási terv egy adoptált verziója a három terv egyikének, amely az Összefüggő bibliai olvasmányok című könyvben megtalálható és az Adventist Heritage Ministry engedélyével használjuk.</p>
-                          <p>...</p>
                         </div>
                         <div id="bekIgek"></div>
                         <div id="bekEW" style="display: none;"></div>
@@ -253,16 +247,18 @@
       document.getElementById('bekIgek').style.display = "none";
       document.getElementById('bekEW').style.display = "none";
       document.getElementById('tovinf').style.display = "block";
-      document.getElementById('EWid').classList.remove('actPart');
-      document.getElementById('igek').classList.remove('actPart');
+      document.getElementById('EWid').style.backgroundColor = "#BFCDF8";
+      document.getElementById('igek').style.backgroundColor = "#BFCDF8";
+      document.getElementById('btoin').style.backgroundColor = "#F6F0B6";
     }
     function igeversek() {
       is_igek_vis = true;
       document.getElementById('bekEW').style.display = "none";
       document.getElementById('tovinf').style.display = "none";
       document.getElementById('bekIgek').style.display = "block";
-      document.getElementById('EWid').classList.remove('actPart');
-      document.getElementById('igek').classList.add('actPart');
+      document.getElementById('EWid').style.backgroundColor = "#BFCDF8";
+      document.getElementById('btoin').style.backgroundColor = "#BFCDF8";
+      document.getElementById('igek').style.backgroundColor = "#F6F0B6";
       document.body.scrollTop = 0; // For Safari
       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
       if ( !is_igek_load ) {
@@ -274,8 +270,9 @@
       document.getElementById('bekIgek').style.display = "none";
       document.getElementById('tovinf').style.display = "none";
       document.getElementById('bekEW').style.display = "block";
-      document.getElementById('igek').classList.remove('actPart');
-      document.getElementById('EWid').classList.add('actPart');
+      document.getElementById('igek').style.backgroundColor = "#BFCDF8";
+      document.getElementById('btoin').style.backgroundColor = "#BFCDF8";
+      document.getElementById('EWid').style.backgroundColor = "#F6F0B6";
       document.body.scrollTop = 0; // For Safari
       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
       if ( !is_pl_load ) {
@@ -326,17 +323,19 @@
       case 3: egyes = num; break;
       }
       // set element styles
-      document.getElementById('0' + hek).classList.remove('aaDay');
-      document.getElementById('1' + hek).classList.remove('aaDay');
-      document.getElementById('2' + hek).classList.remove('aaDay');
-      document.getElementById('3' + hek).classList.remove('aaDay');
-      document.getElementById('4' + hek).classList.remove('aaDay');
-      document.getElementById('5' + hek).classList.remove('aaDay');
-      document.getElementById('6' + hek).classList.remove('aaDay');
-      document.getElementById('7' + hek).classList.remove('aaDay');
-      document.getElementById('8' + hek).classList.remove('aaDay');
-      document.getElementById('9' + hek).classList.remove('aaDay');
-      document.getElementById('' + num + hek).classList.add('aaDay');
+      document.getElementById('0' + hek).style.backgroundColor = "#9DE1FF";
+      document.getElementById('1' + hek).style.backgroundColor = "#9DE1FF";
+      document.getElementById('2' + hek).style.backgroundColor = "#9DE1FF";
+      if ( hek != 1 ) {
+        document.getElementById('3' + hek).style.backgroundColor = "#9DE1FF";
+        document.getElementById('4' + hek).style.backgroundColor = "#9DE1FF";
+        document.getElementById('5' + hek).style.backgroundColor = "#9DE1FF";
+        document.getElementById('6' + hek).style.backgroundColor = "#9DE1FF";
+        document.getElementById('7' + hek).style.backgroundColor = "#9DE1FF";
+        document.getElementById('8' + hek).style.backgroundColor = "#9DE1FF";
+        document.getElementById('9' + hek).style.backgroundColor = "#9DE1FF";
+      }
+      document.getElementById('' + num + hek).style.backgroundColor = "gold";
       // set pday and localStorage and cur_idx
       if ( prev_valid ) {
         let rom = 0;
@@ -376,7 +375,7 @@
           script.onload = function () {
               let tartalom = 'Nincs mai napra vonatkozó ige.';
               if ( az_ige.length != 0 ) {
-                tartalom = '<h5 style="color:#007c00"><b>' + az_ige[0] + "</b></h5>";
+                tartalom = '<h5 style="color:#007c00"><b>&nbsp;&nbsp;' + az_ige[0] + "</b></h5>";
                 var eddig = Math.floor(az_ige.length / 2);
                 for ( let i = 0; i < eddig; ++i ) {
                   tartalom += '<p><span style="color:#007c00">&nbsp;' + az_ige[1 + 2 * i] + "</span> ";
@@ -393,7 +392,7 @@
               let tartalom = 'Nincs mai napra vonatkozó PL idézet.'
               if (az_id.length != 0){
                 tartalom = "<p>" + az_id[0] + "</p>";
-                tartalom += '<h5 style="color:#007c00"><b>' + az_id[1] + "</b></h5>";
+                tartalom += '<h5 style="color:#007c00"><b>&nbsp;&nbsp;' + az_id[1] + "</b></h5>";
                 var eddig = Math.floor(az_id.length / 2);
                 for ( let i = 1; i < eddig; ++i ) {
                   tartalom += '<p>' + az_id[2 * i];
@@ -461,16 +460,17 @@
       document.getElementById('part1').classList.remove('aaPart');
       document.getElementById('part' + ipp).classList.add('aaPart');
       document.getElementById('curDay').innerHTML = '' + ipd;
-      document.getElementById('01').classList.remove('aaDay');
-      document.getElementById('02').classList.remove('aaDay');
-      document.getElementById('13').classList.remove('aaDay');
-      document.getElementById('' + szazas + 1).classList.add('aaDay');
-      document.getElementById('' + tizes + 2).classList.add('aaDay');
-      document.getElementById('' + egyes + 3).classList.add('aaDay');
+      document.getElementById('01').style.backgroundColor = "#9DE1FF";
+      document.getElementById('02').style.backgroundColor = "#9DE1FF";
+      document.getElementById('13').style.backgroundColor = "#9DE1FF";
+      document.getElementById('' + szazas + 1).style.backgroundColor = "gold";
+      document.getElementById('' + tizes + 2).style.backgroundColor = "gold";
+      document.getElementById('' + egyes + 3).style.backgroundColor = "gold";
     }else {
       localStorage.setItem("prevPart", 1);
       localStorage.setItem("prevDay", 1);
     }
+    document.getElementById('igek').style.backgroundColor = "#F6F0B6";
     // fill content
     fill_content();
   </script>
