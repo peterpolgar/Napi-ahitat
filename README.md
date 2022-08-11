@@ -1,3 +1,3 @@
 # Napi áhítat
 
-[https://github.com/peterpolgar/Napi-ahitat](https://github.com/peterpolgar/Napi-ahitat)
+[https://peterpolgar.github.io/Napi-ahitat](https://peterpolgar.github.io/Napi-ahitat)
