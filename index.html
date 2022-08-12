@@ -231,6 +231,33 @@
                       <div id="tardiv" style="margin: 1rem 0 5rem .4rem">
                         <div id="tovinf" style="display: none;">
                           <p>A naponkénti közösség, melyet az ima és a bibliatanulmányozás által ápolhatunk Istennel, a legfontosabb lelki gyakorlat, amelyet ki kell fejlesztenünk. Ellen White írásai, amelyekre gyakran úgy utalunk, mint a „Prófétaság Lelkére” (Lásd: Jel 12:17; 19:10), ihletett segítséget jelentenek a Biblia megértéséhez, hogy felfedezhesd Isten Igéjének hatalmát és szépségét. Ez a weblap egy olvasási tervet valósít meg, melynek 4 szakasza van, minden szakasz egyenként 260 napból áll, és ez a terv végigvezet a Biblia elejétől a végéig. A weblap az olvasási terv alapján, annak minden egyes napjára az adott bibliaszövegeket és a hozzá kapcsolódó adott szakaszokat jelenít meg a Pátriárkák és próféták, Próféták és királyok, a Jézushoz vezető út, a Jézus élete, Krisztus példázatai, Gondolatok a hegyibeszédről, az Apostolok története és a Nagy küzdelem című könyvekből.</p>
+                          <p>PL könyv címek rövidítései:
+                            <span style="font-family: monospace">
+                              <br>PP:&nbsp;&nbsp;Pátriárkák és próféták
+                              <br>PK:&nbsp;&nbsp;Próféták és királyok
+                              <br>JVÚ:&nbsp;Jézushoz vezető út
+                              <br>JÉ:&nbsp;&nbsp;Jézus élete
+                              <br>KP:&nbsp;&nbsp;Krisztus példázatai
+                              <br>GHB:&nbsp;Gondolatok a Hegyibeszédről
+                              <br>AT:&nbsp;&nbsp;Az Apostolok története
+                              <br>NK:&nbsp;&nbsp;Nagy küzdelem
+                            </span>
+                          </p>
+                          <p>A weblap első betöltésekor alapértelmezetten az 1. rész 1. napja kerül betöltésre. A weblap újratöltéskor az előző betöltéskor utoljára megtekintett napot jeleníti meg abban az esetben, ha az újratöltés ugyanazon a napon történik. Ha az újratöltés egy későbbi napon történik, akkor az előző betöltéskor utoljára megtekintett nap + 1. nap fog megjelenni. Ezáltal megvalósul a napi szó jelentése.</p>
+                          <p>Ha egy adott napnál nincs ige, akkor automatikusan a PL idézet fog megjelenni, és fordítva, ha egy adott napnál nincs PL idézet, akkor automatikusan az ige fog megjelenni. Kivétel az "Igeversek" és a "PL idézet" gombokra való kattintás, mert ekkor nincs automatikus megjelenítés, hanem kiírja, ha nincs aznapi tartalom.</p>
+                          <p>E weblaphoz használt Biblia kiadás egy régebbi Károli fordítás.</p>
+                          <p>A felhasznált PL könyvek kiadásai: a white-konyvtar.hu-n elérhető könyvek közül az Advent Kiadó által kiadott kiadások. Kiadási évek:
+                            <span style="font-family: monospace">
+                              <br>Pátriárkák és próféták:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1890
+                              <br>Próféták és királyok:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1981
+                              <br>Jézushoz vezető út:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2013
+                              <br>Jézus élete:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1989
+                              <br>Krisztus példázatai:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1983
+                              <br>Gondolatok a Hegyibeszédről:&nbsp;1993
+                              <br>Az Apostolok története:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1911
+                              <br>A nagy küzdelem:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1986
+                            </span>
+                          </p>
                           <p>Különleges köszönet Arl Voorheis testvérnek azért, hogy több mint két évtizedet áldozott arra, kigyűjtse a Biblia és Ellen White írásai közötti összefüggéseket. Voorheis testvér három tervet készített, amelyek a napi olvasmány mennyiségét illetően különböznek egymástól és ezt könyv formájában kiadta Összefüggő bibliai olvasmányok néven. Ennek a csodálatos segédanyagnak egy példányát beszerezheted az Adventist Heritage Ministry oldaláról (<a href="https://www.adventistheritage.org">www.adventistheritage.org</a>). Az ebben a mellékletben található olvasási terv egy adoptált verziója a három terv egyikének, amely az Összefüggő bibliai olvasmányok című könyvben megtalálható és az Adventist Heritage Ministry engedélyével használjuk.</p>
                         </div>
                         <div id="bekIgek"></div>
@@ -435,6 +462,7 @@
     const start = 1647734400000;
     const aday = 86400000;
     let cuti = new Date().getTime();
+    // cuti += aday;
     let cdata = Math.floor((cuti-start)/aday);
     // localStorage.removeItem("prevPart");
     let prevPart = localStorage.getItem("prevPart");
