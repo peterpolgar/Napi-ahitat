@@ -536,6 +536,15 @@
       document.getElementById('13').style.backgroundColor = "gold";
     }
     document.getElementById('igek').style.backgroundColor = "#F6F0B6";
+    // set pdstr
+    let rom = "";
+    switch ( cur_part ) {
+    case 0: rom = "I."; break;
+    case 1: rom = "II."; break;
+    case 2: rom = "III."; break;
+    case 3: rom = "IV."; break;
+    }
+    pdstr = rom + ":" + (szazas * 100 + tizes * 10 + egyes) + ". nap";
     // fill content
     fill_content();
   </script>
