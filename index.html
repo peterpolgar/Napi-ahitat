@@ -162,52 +162,52 @@
                             <div class="d-flex">
                               <div id="01" class="py-2 flex-fill szam" onclick="chooseNum(0, 1)">0</div>
                               <div id="02" class="py-2 flex-fill szam" onclick="chooseNum(0, 2)">0</div>
-                              <div id="03" class="py-2 flex-fill szam" onclick="chooseNum(0, 3)">0</div>
+                              <div id="03" class="py-2 flex-fill szam" onclick="chooseLSD(0)">0</div>
                             </div>
                             <div class="d-flex">
                               <div id="11" class="py-2 flex-fill szam" onclick="chooseNum(1, 1)">1</div>
                               <div id="12" class="py-2 flex-fill szam" onclick="chooseNum(1, 2)">1</div>
-                              <div id="13" class="py-2 flex-fill szam" onclick="chooseNum(1, 3)">1</div>
+                              <div id="13" class="py-2 flex-fill szam" onclick="chooseLSD(1)">1</div>
                             </div>
                             <div class="d-flex">
                               <div id="21" class="py-2 flex-fill szam" onclick="chooseNum(2, 1)">2</div>
                               <div id="22" class="py-2 flex-fill szam" onclick="chooseNum(2, 2)">2</div>
-                              <div id="23" class="py-2 flex-fill szam" onclick="chooseNum(2, 3)">2</div>
+                              <div id="23" class="py-2 flex-fill szam" onclick="chooseLSD(2)">2</div>
                             </div>
                             <div class="d-flex">
                               <div id="31" class="py-2 nonu">&nbsp;</div>
                               <div id="32" class="py-2 flex-fill szam" onclick="chooseNum(3, 2)">3</div>
-                              <div id="33" class="py-2 flex-fill szam" onclick="chooseNum(3, 3)">3</div>
+                              <div id="33" class="py-2 flex-fill szam" onclick="chooseLSD(3)">3</div>
                             </div>
                             <div class="d-flex">
                               <div id="41" class="py-2 nonu">&nbsp;</div>
                               <div id="42" class="py-2 flex-fill szam" onclick="chooseNum(4, 2)">4</div>
-                              <div id="43" class="py-2 flex-fill szam" onclick="chooseNum(4, 3)">4</div>
+                              <div id="43" class="py-2 flex-fill szam" onclick="chooseLSD(4)">4</div>
                             </div>
                             <div class="d-flex">
                               <div id="51" class="py-2 nonu">&nbsp;</div>
                               <div id="52" class="py-2 flex-fill szam" onclick="chooseNum(5, 2)">5</div>
-                              <div id="53" class="py-2 flex-fill szam" onclick="chooseNum(5, 3)">5</div>
+                              <div id="53" class="py-2 flex-fill szam" onclick="chooseLSD(5)">5</div>
                             </div>
                             <div class="d-flex">
                               <div id="61" class="py-2 nonu">&nbsp;</div>
                               <div id="62" class="py-2 flex-fill szam" onclick="chooseNum(6, 2)">6</div>
-                              <div id="63" class="py-2 flex-fill szam" onclick="chooseNum(6, 3)">6</div>
+                              <div id="63" class="py-2 flex-fill szam" onclick="chooseLSD(6)">6</div>
                             </div>
                             <div class="d-flex">
                               <div id="71" class="py-2 nonu">&nbsp;</div>
                               <div id="72" class="py-2 flex-fill szam" onclick="chooseNum(7, 2)">7</div>
-                              <div id="73" class="py-2 flex-fill szam" onclick="chooseNum(7, 3)">7</div>
+                              <div id="73" class="py-2 flex-fill szam" onclick="chooseLSD(7)">7</div>
                             </div>
                             <div class="d-flex">
                               <div id="81" class="py-2 nonu">&nbsp;</div>
                               <div id="82" class="py-2 flex-fill szam" onclick="chooseNum(8, 2)">8</div>
-                              <div id="83" class="py-2 flex-fill szam" onclick="chooseNum(8, 3)">8</div>
+                              <div id="83" class="py-2 flex-fill szam" onclick="chooseLSD(8)">8</div>
                             </div>
                             <div class="d-flex">
                               <div id="91" class="py-2 nonu">&nbsp;</div>
                               <div id="92" class="py-2 flex-fill szam" onclick="chooseNum(9, 2)">9</div>
-                              <div id="93" class="py-2 flex-fill szam" onclick="chooseNum(9, 3)">9</div>
+                              <div id="93" class="py-2 flex-fill szam" onclick="chooseLSD(9)">9</div>
                             </div>
                           </div>
                           <div id="bbar" onclick="sidein()"><b><</b></div>
@@ -279,7 +279,7 @@
     var cur_part = 0;
     var szazas = 0, tizes = 0, egyes = 1;
     var prev_valid = true;
-    var is_igek_vis = true, is_igek_load = false, is_pl_load = false;
+    var is_igek_vis = true, is_igek_load = false, is_pl_load = false, pdstr = "";
     function tovabbi_inf() {
       document.getElementById('bekIgek').style.display = "none";
       document.getElementById('bekEW').style.display = "none";
@@ -317,7 +317,6 @@
       }
     }
     function choosePart(part) {
-      let old_part = cur_part;
       cur_part = part - 1;
       // set element styles
       document.getElementById('part1').classList.remove('aaPart');
@@ -325,39 +324,21 @@
       document.getElementById('part3').classList.remove('aaPart');
       document.getElementById('part4').classList.remove('aaPart');
       document.getElementById('part' + part).classList.add('aaPart');
-      // set localStorage and pday and cur_idx
-      napszam = szazas * 100 + tizes * 10 + egyes;
-      if ( prev_valid ) {
-        let rom = 0;
-        switch ( old_part ) {
-        case 0: rom = "I."; break;
-        case 1: rom = "II."; break;
-        case 2: rom = "III."; break;
-        case 3: rom = "IV."; break;
-        }
-        let pday = document.getElementById('pday');
-        pday.innerHTML = rom + ":" + napszam + ". nap";
-      }
-      if ( napszam == 0 || napszam > 260 ) {
-        cur_idx = 2345;
-        prev_valid = false;
-      }else {
-        localStorage.setItem("prevPart", part);
-        localStorage.setItem("prevDay", napszam);
-        cur_idx = cur_part * 260 + napszam - 1;
-        prev_valid = true;
-      }
-      // fill content
-      is_igek_load = false;
-      is_pl_load = false;
-      fill_content();
+      document.getElementById('03').style.backgroundColor = "#9DE1FF";
+      document.getElementById('13').style.backgroundColor = "#9DE1FF";
+      document.getElementById('23').style.backgroundColor = "#9DE1FF";
+      document.getElementById('33').style.backgroundColor = "#9DE1FF";
+      document.getElementById('43').style.backgroundColor = "#9DE1FF";
+      document.getElementById('53').style.backgroundColor = "#9DE1FF";
+      document.getElementById('63').style.backgroundColor = "#9DE1FF";
+      document.getElementById('73').style.backgroundColor = "#9DE1FF";
+      document.getElementById('83').style.backgroundColor = "#9DE1FF";
+      document.getElementById('93').style.backgroundColor = "#9DE1FF";
     }
     function chooseNum(num, hek) {
-      let old_daynum = szazas * 100 + tizes * 10 + egyes;
       switch ( hek ) {
       case 1: szazas = num; break;
       case 2: tizes = num; break;
-      case 3: egyes = num; break;
       }
       // set element styles
       document.getElementById('0' + hek).style.backgroundColor = "#9DE1FF";
@@ -373,19 +354,37 @@
         document.getElementById('9' + hek).style.backgroundColor = "#9DE1FF";
       }
       document.getElementById('' + num + hek).style.backgroundColor = "gold";
+      document.getElementById('03').style.backgroundColor = "#9DE1FF";
+      document.getElementById('13').style.backgroundColor = "#9DE1FF";
+      document.getElementById('23').style.backgroundColor = "#9DE1FF";
+      document.getElementById('33').style.backgroundColor = "#9DE1FF";
+      document.getElementById('43').style.backgroundColor = "#9DE1FF";
+      document.getElementById('53').style.backgroundColor = "#9DE1FF";
+      document.getElementById('63').style.backgroundColor = "#9DE1FF";
+      document.getElementById('73').style.backgroundColor = "#9DE1FF";
+      document.getElementById('83').style.backgroundColor = "#9DE1FF";
+      document.getElementById('93').style.backgroundColor = "#9DE1FF";
+    }
+    function chooseLSD(num) {
+      egyes = num;
+      // set element styles
+      document.getElementById('03').style.backgroundColor = "#9DE1FF";
+      document.getElementById('13').style.backgroundColor = "#9DE1FF";
+      document.getElementById('23').style.backgroundColor = "#9DE1FF";
+      document.getElementById('33').style.backgroundColor = "#9DE1FF";
+      document.getElementById('43').style.backgroundColor = "#9DE1FF";
+      document.getElementById('53').style.backgroundColor = "#9DE1FF";
+      document.getElementById('63').style.backgroundColor = "#9DE1FF";
+      document.getElementById('73').style.backgroundColor = "#9DE1FF";
+      document.getElementById('83').style.backgroundColor = "#9DE1FF";
+      document.getElementById('93').style.backgroundColor = "#9DE1FF";
+      document.getElementById('' + num + '3').style.backgroundColor = "gold";
       // set pday and localStorage and cur_idx
       if ( prev_valid ) {
-        let rom = 0;
-        switch ( cur_part ) {
-        case 0: rom = "I."; break;
-        case 1: rom = "II."; break;
-        case 2: rom = "III."; break;
-        case 3: rom = "IV."; break;
-        }
         let pday = document.getElementById('pday');
-        pday.innerHTML = rom + ":" + old_daynum + ". nap";
+        pday.innerHTML = pdstr;
       }
-      napszam = szazas * 100 + tizes * 10 + egyes;
+      let napszam = szazas * 100 + tizes * 10 + egyes;
       if ( napszam == 0 || napszam > 260 ) {
         cur_idx = 2345;
         prev_valid = false;
@@ -394,6 +393,14 @@
         localStorage.setItem("prevDay", napszam);
         document.getElementById('curDay').innerHTML = '' + napszam;
         cur_idx = cur_part * 260 + napszam - 1;
+        let rom = "";
+        switch ( cur_part ) {
+        case 0: rom = "I."; break;
+        case 1: rom = "II."; break;
+        case 2: rom = "III."; break;
+        case 3: rom = "IV."; break;
+        }
+        pdstr = rom + ":" + napszam + ". nap";
         prev_valid = true;
       }
       // fill content
