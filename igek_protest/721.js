@@ -1,0 +1,1 @@
+var az_ige = ['Mt 21:32', 'Mt 21:32', 'Mert eljött hozzátok János az igazság útján, de nem hittetek neki, a vámszedők és a parázna nők pedig hittek neki. Ti azonban ezt látva még később sem gondoltátok meg magatokat, hogy higgyetek neki."']

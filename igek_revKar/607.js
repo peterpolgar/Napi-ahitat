@@ -1,0 +1,1 @@
+var az_ige = ['Mt 6:13-15', 'Mt 6:13', 'és ne vígy minket kísértésbe, de szabadíts meg a gonosztól, mert tiéd az ország, a hatalom és a dicsőség mindörökké. Ámen.', '14', 'Mert ha megbocsátjátok az emberek vétkeit, nektek is megbocsát a ti mennyei Atyátok.', '15', 'Ha pedig nem bocsátotok meg az embereknek, Atyátok sem bocsátja meg a ti vétkeiteket.']

@@ -1,0 +1,1 @@
+var az_ige = ['Mt 5:5-6; Lk 6:21a', 'Mt 5:5', 'Boldogok a szelídek, mert ők öröklik a földet.', '6', 'Boldogok, akik éheznek és szomjaznak az igazságra, mert ők megelégíttetnek.', 'Lk 6:21a', 'Boldogok vagytok, akik most éheztek, mert majd megelégíttettek.']

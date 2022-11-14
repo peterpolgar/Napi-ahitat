@@ -1,0 +1,1 @@
+var az_ige = ['ApCsel 17:1-2', 'ApCsel 17:1', 'Miután áthaladtak Amfipoliszon és Apollónián, Thesszalonikába értek, ahol zsinagógájuk volt a zsidóknak.', '2', 'Pál pedig szokása szerint bement hozzájuk, és három szombaton is vitába szállt velük az Írások alapján.']

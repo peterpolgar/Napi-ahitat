@@ -1,0 +1,1 @@
+var az_ige = ['ApCsel 27:21;28:10', 'ApCsel 27:21', 'Amikor pedig már jó ideje nem ettek, Pál felállt közöttük, és azt mondta: Férfiak, jobb lett volna, ha rám hallgattok, és nem indulunk el Krétából, így elkerültük volna ezt a bajt és kárt.', '28:10', 'Ezért igen nagy megbecsülésben volt részünk, és amikor elhajóztunk, a szükséges dolgokkal elláttak bennünket.']

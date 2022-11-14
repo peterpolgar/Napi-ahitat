@@ -1,0 +1,1 @@
+var az_ige = ['Mt 5:9-10', 'Mt 5:9', 'Boldogok, akik békét teremtenek, mert ők Isten fiainak neveztetnek.', '10', 'Boldogok, akiket az igazságért üldöznek, mert övék a mennyek országa.']

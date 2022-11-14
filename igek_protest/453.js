@@ -1,0 +1,1 @@
+var az_ige = ['Dn 1:21', 'Dn 1:21', 'Ott is maradt Dániel Círus király uralkodásának első évéig.']

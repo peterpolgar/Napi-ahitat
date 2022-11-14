@@ -1,0 +1,1 @@
+var az_ige = ['Mk 4:14', 'Mk 4:14', 'A magvető az igét hinti.']

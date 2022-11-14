@@ -1,0 +1,1 @@
+var az_ige = ['Mt 5:14-16', 'Mt 5:14', 'Ti vagytok a világ világossága. Nem rejthető el a hegyen épült város.', '15', 'A lámpást sem azért gyújtják meg, hogy a véka alá, hanem hogy a lámpatartóra tegyék, és akkor világít mindenkinek a házban.', '16', 'Úgy ragyogjon a ti világosságotok az emberek előtt, hogy lássák jó cselekedeteiteket, és dicsőítsék a ti mennyei Atyátokat."']

@@ -1,0 +1,1 @@
+var az_ige = ['Jn 2:11', 'Jn 2:11', 'Ezt tette Jézus első jelként a galileai Kánában, így jelentette ki dicsőségét, és tanítványai hittek benne.']

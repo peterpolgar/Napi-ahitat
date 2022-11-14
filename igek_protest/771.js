@@ -1,0 +1,1 @@
+var az_ige = ['Mt 28:9-10', 'Mt 28:9', 'És íme, Jézus szembejött velük, és ezt mondta: "Legyetek üdvözölve!" Ők pedig odamentek hozzá, megragadták a lábát, és leborultak előtte.', '10', 'Ekkor Jézus így szólt hozzájuk: "Ne féljetek: menjetek el, adjátok hírül atyámfiainak, hogy menjenek Galileába, és ott meglátnak engem."']

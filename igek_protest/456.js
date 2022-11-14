@@ -1,0 +1,1 @@
+var az_ige = ['Dn 2:48-49', 'Dn 2:48', 'Akkor a király nagy méltóságra emelte Dánielt, sok és nagy ajándékot adott neki, majd Babilon város kormányzójává és a babiloni bölcsek elöljárójává tette.', '49', 'Dániel viszont azt kérte a királytól, hogy Sadrakot, Mésakot és Abédnegót rendelje szolgálatba Babilon városában; Dániel pedig a királyi udvarban maradt.']

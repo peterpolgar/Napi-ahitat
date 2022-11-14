@@ -1,0 +1,1 @@
+var az_ige = ['1Kir 17:5-7', '1Kir 17:5', 'Elment azért, és az ÚR beszéde szerint cselekedett. Elment, és leült a Kerít-patak mellett, amely a Jordánba folyik.', '6', 'A hollók hoztak neki kenyeret és húst reggel és este, és a patakból ivott.', '7', 'Néhány nap múlva kiszáradt a patak, mert nem esett eső a földre.']

@@ -1,0 +1,1 @@
+var az_ige = ['Mt 6:11-12; Lk 11:3-4', 'Mt 6:11', 'mindennapi kenyerünket add meg nékünk ma,', '12', 'és bocsásd meg vétkeinket, miképpen mi is megbocsátunk az ellenünk vétkezőknek;', 'Lk 11:3', 'A mi mindennapi kenyerünket add meg nekünk naponként.', '4', 'És bocsásd meg a mi bűneinket, mert mi is megbocsátunk minden ellenünk vétkezőnek. És ne vígy minket kísértésbe."']

@@ -1,0 +1,1 @@
+var az_ige = ['Mt 5:17-18', 'Mt 5:17', '"Ne gondoljátok, hogy azért jöttem, hogy érvénytelenné tegyem a törvényt vagy a próféták tanítását. Nem azért jöttem, hogy érvénytelenné tegyem, hanem hogy betöltsem azokat.', '18', 'Mert bizony mondom néktek, hogy amíg az ég és a föld el nem múlik, egy ióta vagy egy vessző sem vész el a törvényből, míg minden be nem teljesedik.']

@@ -1,0 +1,1 @@
+var az_ige = ['ApCsel 21:17-19', 'ApCsel 21:17', 'Amikor Jeruzsálembe érkeztünk, örömmel fogadtak a testvérek.', '18', 'Másnap eljött Pál velünk együtt Jakabhoz, ahol a vének is jelen voltak mindnyájan.', '19', 'Köszöntötte őket, majd részletesen elbeszélte, mit tett az Isten a pogányok között az ő szolgálata által.']

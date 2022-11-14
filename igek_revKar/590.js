@@ -1,0 +1,1 @@
+var az_ige = ['Mt 5:3; Lk 6:20', 'Mt 5:3', 'Boldogok a lélekben szegények, mert övék a mennyek országa.', 'Lk 6:20', 'Ő pedig tanítványaira emelte szemét, és azt mondta: Boldogok vagytok, ti szegények, mert tiétek az Isten országa.']

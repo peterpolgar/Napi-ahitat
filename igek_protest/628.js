@@ -1,0 +1,1 @@
+var az_ige = ['Mt 13:51-52', 'Mt 13:51', '"Megértettétek mindezt?" - kérdezte tőlük Jézus. Azok ezt felelték: "Igen."', '52', 'Ő pedig ezt mondta nekik: "Tehát minden írástudó, aki tanítványává lett a mennyek országának, hasonló ahhoz a gazdához, aki újat és ót hoz elő éléskamrájából."']
